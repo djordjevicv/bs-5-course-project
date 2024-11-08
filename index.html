@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React kurs</title>
+    <link rel="stylesheet" href="css/styles.min.css">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- Navigacioni meni -->
+    <nav class="navbar navbar-expand-lg bg-body-secondary sticky-top shadow-sm">
+        <div class="container-fluid">
+            <!-- Logo / Naslov -->
+            <a class="navbar-brand fw-bold" href="#">Krojačeva škola</a>
+            <!-- "Hamburger" dugme -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#our-navbar"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Navigacioni linkovi -->
+            <div class="collapse navbar-collapse justify-content-end" id="our-navbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#syllabus">Sadržaj</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#reviews-section">Utisci</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Kontakt</a>
+                    </li>
+                    <!-- Dugme koje otvara modal -->
+                    <li class="nav-item">
+                        <button type="button" class="btn btn-primary fw-bold" data-bs-toggle="modal"
+                            data-bs-target="#our-modal">Upiši</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Uvodna sekcija -->
+    <section id="background-image"></section>
+    <section id="intro">
+        <div class="container-lg p-5">
+            <div id="intro-card"
+                class="row justify-content-evenly align-items-center p-2 py-4 bg-body-secondary rounded-2 shadow-sm">
+                <div class="col-md-6">
+                    <h1 class="mb-3">Nauči React</h1>
+                    <p class="mb-3">Više od 4 sata video lekcija i praktičan rad: temeljno upoznaj React.js biblioteku i
+                        izgradi
+                        impresivan projekat za portfolio.</p>
+                    <div class="d-flex flex-wrap align-items-center mb-3">
+                        <p class="my-0 me-2">4.5
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-half"></i>
+                        </p>
+                        <button type="button" class="btn btn-primary fw-bold px-2 py-1" data-bs-toggle="modal"
+                            data-bs-target="#our-modal">Upiši</button>
+                    </div>
+                    <a data-bs-toggle="offcanvas" href="#our-offcanvas" aria-controls="our-offcanvas">
+                        Pogledaj još naših obuka
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-group bg-body-secondary mt-4 mt-md-0">
+                        <li class="list-group-item fs-4 fw-bold p-2">Kurs uključuje...</li>
+                        <li class="list-group-item p-2"><i class="bi bi-patch-check"></i> Sertifikat Krojačeve škole
+                        </li>
+                        <li class="list-group-item p-2"><i class="bi bi-journals"></i> Temeljno napisane skripte</li>
+                        <li class="list-group-item p-2"><i class="bi bi-stopwatch"></i> Kvizove za testiranje znanja
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Opis kursa -->
+    <section id="description" class="mb-5">
+        <div class="container-lg">
+            <div class="row justify-content-center">
+                <div class="col-10">
+                    <h2 class="text-center">Želiš da savladaš najtraženiju JavaScript biblioteku u IT industriji? Sada
+                        možeš!</h2>
+                    <p class="text-center">Pridruži se našoj zajednici, i od instruktora koji je radio na industrijskim
+                        React projektima kroz<span class="fw-bold"> intuitivne video materijale, detaljne skripte i
+                            praktičan
+                            rad</span>
+                        stekni duboko razumevanje ključnih
+                        koncepata ove biblioteke.</p>
+                    <p class="text-center">Mnogo važnije od toga, iskoristi priliku da stečena znanja primeniš izradom
+                        projekta za portfolio
+                        kojim ćeš impresionirati poslodavce, ili buduće klijente ;)</p>
+                    <p class="text-center"><span class="fw-bold">Poštujemo tvoje vreme!</span> Nećemo ga traćiti na
+                        konfuzne out-dated i dragged-out
+                        tutorijale. Koristićemo
+                        <span class="fw-bold">React verziju 18</span>, trenutno korišćenu u industriji, i bavićemo se
+                        najmodernijim praksama i
+                        karakteristikama ove biblioteke.
+                    </p>
+                    <p class="text-center">Vojin Đorđević te čeka, upiši kurs i polećemo!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Sadržaj kursa-->
+    <section id="syllabus" class="bg-body-secondary position-relative">
+        <i class="bi bi-arrow-down-circle-fill position-absolute top-0 start-50 translate-middle m-0"
+            id="arrow-icon"></i>
+        <div class="container-lg">
+            <div class="row p-4 justify-content-center">
+                <div class="col-8 mt-3 d-flex flex-column justify-content-center">
+                    <h2 class="text-center">Sadržaj obuke</h2>
+                    <!-- Accordion komponenta -->
+                    <div class="accordion accordion-flush mt-3" id="our-accordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed fw-bold fs-4" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                    aria-controls="flush-collapseOne">
+                                    React I
+                                </button>
+                            </h2>
+                            <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                data-bs-parent="#our-accordion">
+                                <div class="accordion-body">
+                                    <p> <i class="bi bi-play-circle-fill"></i> Uvod u React</p>
+                                    <p><i class="bi bi-play-circle-fill"></i> Create React App</p>
+                                    <p><i class="bi bi-play-circle-fill"></i> React + Vite</p>
+                                    <p><i class="bi bi-play-circle-fill"></i> Struktura foldera Create React App
+                                        projekta</p>
+                                    <p><i class="bi bi-play-circle-fill"></i> Detaljan pregled index.js fajla</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed fw-bold fs-4" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                    aria-controls="flush-collapseTwo">
+                                    React II
+                                </button>
+                            </h2>
+                            <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                                data-bs-parent="#our-accordion">
+                                <div class="accordion-body">
+                                    <p><i class="bi bi-play-circle-fill"></i> Naša prva komponenta</p>
+                                    <p><i class="bi bi-play-circle-fill"></i> Izrada projekta (1) - particles-bg, ToDo
+                                    </p>
+                                    <p><i class="bi bi-play-circle-fill"></i> Izrada projekta (2) - ItemsList, key prop
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed fw-bold fs-4" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#flush-collapseThree"
+                                    aria-expanded="false" aria-controls="flush-collapseThree">
+                                    React III
+                                </button>
+                            </h2>
+                            <div id="flush-collapseThree" class="accordion-collapse collapse"
+                                data-bs-parent="#our-accordion">
+                                <div class="accordion-body">
+                                    <p><i class="bi bi-play-circle-fill"></i> Izrada projekta (3) - state, component
+                                        lifecycle</p>
+                                    <p><i class="bi bi-play-circle-fill"></i> Izrada projekta (4) - useState Hook</p>
+                                    <p><i class="bi bi-play-circle-fill"></i> Izrada projekta (5) - addItem</p>
+                                    <p><i class="bi bi-play-circle-fill"></i> Izrada projekta (6) - oneway data flow</p>
+                                    <p><i class="bi bi-play-circle-fill"></i> Izrada projekta (7) - Footer, conditional
+                                        rendering</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed fw-bold fs-4" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false"
+                                    aria-controls="flush-collapseFour">
+                                    React IV
+                                </button>
+                            </h2>
+                            <div id="flush-collapseFour" class="accordion-collapse collapse"
+                                data-bs-parent="#our-accordion">
+                                <div class="accordion-body">
+                                    <p><i class="bi bi-play-circle-fill"></i> Izrada projekta (8) - localStorage,
+                                        useEffect</p>
+                                    <p><i class="bi bi-play-circle-fill"></i> Izrada projekta (9) - props.children</p>
+                                    <p><i class="bi bi-play-circle-fill"></i> Izrada projekta (10) - prop drilling,
+                                        context API</p>
+                                    <p><i class="bi bi-play-circle-fill"></i> Izrada projekta (11) - scalable folder
+                                        structure</p>
+                                    <p><i class="bi bi-play-circle-fill"></i> Izrada projekta (12) - deployment</p>
+                                    <p><i class="bi bi-play-circle-fill"></i> Kraj?</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed fw-bold fs-4" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false"
+                                    aria-controls="flush-collapseFive">
+                                    Završni rad
+                                </button>
+                            </h2>
+                            <div id="flush-collapseFive" class="accordion-collapse collapse"
+                                data-bs-parent="#our-accordion">
+                                <div class="accordion-body">
+                                    Potvrdi svoje znanje za kurs REACT, uvežbaj dobro i stekni
+                                    rutinu! Napravili smo izazovan zadatak za ovaj kurs. Neće ti biti lako, ali se
+                                    višestruko isplati.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-primary fw-bold px-4 py-2 fs-5 mt-4 mx-auto"
+                        data-bs-toggle="modal" data-bs-target="#our-modal">Upiši</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Utisci -->
+    <section id="reviews-section">
+        <div class="container-lg mt-3">
+            <div class="row p-4 g-4 justify-content-center" id="reviews">
+                <h2 class="text-center mb-3">Utisci</h2>
+                <div class="col-md-4">
+                    <div class="card shadow">
+                        <img src="assets/man.png" class="card-img-top m-auto pt-3 avatar-icon" alt="user-avatar">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Pera Perić</h5>
+                            <h5 class="card-title text-center">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                            </h5>
+                            <p class="card-text fs-6">Lorem ipsum dolor sit amet,
+                                consectetur adipiscing elit. Etiam vehicula justo nec auctor egestas. Curabitur lobortis
+                                id mi ac consequat. Phasellus hendrerit posuere porta.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow">
+                        <img src="assets/woman.png" class="card-img-top m-auto pt-3 avatar-icon" alt="user-avatar">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Petra Petrović</h5>
+                            <h5 class="card-title text-center">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                            </h5>
+                            <p class="card-text fs-6">Lorem ipsum dolor sit amet,
+                                consectetur adipiscing elit. Etiam vehicula justo nec auctor egestas. Curabitur lobortis
+                                id mi ac consequat. Phasellus hendrerit posuere porta.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow">
+                        <img src="assets/businessman.png" class="card-img-top m-auto pt-3 avatar-icon"
+                            alt="user-avatar">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Marko Marić</h5>
+                            <h5 class="card-title text-center">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                            </h5>
+                            <p class="card-text fs-6">Lorem ipsum dolor sit amet,
+                                consectetur adipiscing elit. Etiam vehicula justo nec auctor egestas. Curabitur lobortis
+                                id mi ac consequat. Phasellus hendrerit posuere porta.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-8 d-flex justify-content-center" id="load-more-reviews">
+                    <button class="btn btn-secondary px-4 py-2 fs-5 fw-bold mt-3">
+                        Učitaj još utisaka
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Kontakt -->
+    <section id="contact">
+        <div class="container-lg">
+            <div class="row p-4 justify-content-center">
+                <div class="col-10">
+                    <h2 class="text-center">Kontaktiraj nas</h2>
+                    <p class="lead text-center">Popuni formu ako imaš bilo kakva pitanja i odgovorićemo u najkraćem roku
+                    </p>
+                    <form id="our-form">
+                        <div class="mb-3">
+                            <label for="username" class="form-label">Ime</label>
+                            <input type="text" class="form-control" id="username" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Poruka</label>
+                            <textarea name="message" id="message" class="form-control" rows="3" required></textarea>
+                        </div>
+                        <button type="submit"
+                            class="btn btn-primary px-4 py-2 fs-5 fw-bold mt-4 d-block m-auto" id="form-submit-button">Pošalji</button>
+                    </form>
+                    <!-- Toast komponenta -->
+                    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+                        <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                            <div class="toast-header bg-success">
+                                <strong class="me-auto text-light">Krojačeva škola</strong>
+                                <button type="button" class="btn-close" data-bs-dismiss="toast"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="toast-body">
+                                Poruka uspešno poslata!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Credits -->
+    <section id="credits">
+        <div class="container-lg">
+            <div class="row my-4 text-center">
+                <h5>Credits</h5>
+                <a href="https://www.flaticon.com/free-icons/female" title="female icons">Female icons created by
+                    Prosymbols Premium - Flaticon</a>
+                <a href="https://www.flaticon.com/free-icons/people" title="people icons">People icons created by
+                    Prosymbols Premium - Flaticon</a>
+                <a href="https://www.flaticon.com/free-icons/man" title="man icons">Man icons created by Prosymbols
+                    Premium - Flaticon</a>
+            </div>
+        </div>
+    </section>
+    <!-- Modal -->
+    <div class="modal fade" id="our-modal" tabindex="-1" aria-labelledby="our-modal-label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="our-modal-label">Prijave se otvaraju uskoro!</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p> Prijave za novi ciklus React obuke se otvaraju <span class="fw-bold">01.12.2024.</span></p>
+                    <p> Hvala Vam na interesovanju i strpljenju!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Offcanvas -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="our-offcanvas" aria-labelledby="our-offcanvas-label">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="our-offcanvas-label">Naše obuke</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="npm-tab" data-bs-toggle="tab" data-bs-target="#npm-tab-pane"
+                        type="button" role="tab" aria-controls="npm-tab-pane" aria-selected="true">npm</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="vscode-tab" data-bs-toggle="tab" data-bs-target="#vscode-tab-pane"
+                        type="button" role="tab" aria-controls="vscode-tab-pane" aria-selected="false">Visual Studio
+                        Code</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="bs5-tab" data-bs-toggle="tab" data-bs-target="#bs5-tab-pane"
+                        type="button" role="tab" aria-controls="bs5-tab-pane" aria-selected="false">Bootstrap 5</button>
+                </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active mt-3" id="npm-tab-pane" role="tabpanel" aria-labelledby="npm-tab"
+                    tabindex="0">
+                    <p>Ako misliš da profesionalci od nule pišu kod za svaki novi projekat, neko te je
+                        ozbiljno prevario. Zapravo, za većinu poslova postoji gotova biblioteka. Bilo to za potrebe
+                        stilizovanja, izrade korisničkog interfejsa, osiguravanja važnih podataka ili komunikacije sa
+                        bazom
+                        podataka… A korišćenje svih ovih biblioteka omogućavaju package manageri, od kojih je npm
+                        najkorišćeniji!</p>
+                    <button class="btn btn-primary px-4 py-2 fw-bold">Proširi</button>
+                </div>
+                <div class="tab-pane fade mt-3" id="vscode-tab-pane" role="tabpanel" aria-labelledby="vscode-tab"
+                    tabindex="0">
+                    <p>Visual Studio Code je besplatan i open-source editor izvornog koda, izrađen od strane
+                        Microsoft-a. Lightweight je i može se koristiti na Windows, Mac i Linux operativnim sistemima.
+                        Veoma je popularan među programerima, pruža podršku za korišćenje različitih programskih jezika,
+                        ali takođe postoje i ekstenzije koje omogućavaju podešavanje izgleda i radnog okruženja samog
+                        editora.</p>
+                    <button class="btn btn-primary px-4 py-2 fw-bold">Proširi</button>
+                </div>
+                <div class="tab-pane fade mt-3" id="bs5-tab-pane" role="tabpanel" aria-labelledby="bs5-tab"
+                    tabindex="0">
+                    <p>Nauči da koristiš najnoviju verziju Bootstrap-a!</p>
+                    <button class="btn btn-primary px-4 py-2 fw-bold">Proširi</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="js/fetchMoreCards.js"></script>
+    <script src="js/triggerToast.js"></script>
+</body>
+
+</html>
