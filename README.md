@@ -19,7 +19,10 @@ This project utilizes modern <b>Bootstrap 5</b> features such as:
 <br>&emsp;✅ <b>Utility API</b>
 
 ## Want to give it a try?
-Follow these steps:
+
+[Live preview is but one click away.](https://djordjevicv.github.io/bs-5-course-project/) 👈🏻
+
+Or if you want to run the app locally, follow these steps:
 1. Install Node.js and npm if you haven't.
 2. Clone this repository.
 3. Open repository folder in terminal and run `npm insall`.
