@@ -4,6 +4,7 @@ This project was developed as part of the online course "Bootstrap 5" in collabo
 <br>
 
 This project utilizes modern <b>Bootstrap 5</b> features such as:
+<br>&emsp;✅ <b>Bootstrap grid</b>
 <br>&emsp;✅ <b>Navbar</b> component
 <br>&emsp;✅ <b>Button</b> component
 <br>&emsp;✅ <b>List group</b> component
