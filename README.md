@@ -1,4 +1,4 @@
-# Online course landing page developed with Bootstrap 5.
+# Online course landing page developed with Bootstrap 5
 
 This project was developed as part of the online course "Bootstrap 5" in collaboration with [Krojačeva škola](https://www.krojacevaskola.com/) online learning platform.
 <br>
